@@ -11,7 +11,7 @@ ul{
   display: flex;
   justify-content: space-around;
 }
-p{
+p,.link{
   color: rgba(255,255,255,0.5);
 }
 #shadow,.today,.wind,.week{
@@ -83,7 +83,6 @@ p{
     min-width: 250px;
   }
   .link{
-    color: rgba(255,255,255,0.5);
     text-align: left;
     margin-left: 200px;
   }
