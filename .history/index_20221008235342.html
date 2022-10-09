@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+<section class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4">
+                <form class="feedback_form" id="form_city">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="text_city">
+                                <input type="text" class="form-control" id="input_city" placeholder="Enter a city"  aria-label="Input group example" aria-describedby="btnGroupAddon">
+                             </div>
+                        </div>
+                        <div class="col-6">
+                             <div class="button_city">
+                                 <input class="btn btn-primary" type="submit" value="Search">
+                                 <button type="button" class="btn btn-primary" id="geolocation">Current</button>
+                            </div>
+                        </div>
+                </div>
+                </form>
+                <div class="button_geolocation">
+                    
+                    
+               </div>
+            </div>
+            <div class="col-xl-8"></div>
+        </div>
+    </div>
+</section>
+<section class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="current_weather">
+                    <div>
+                        <img src="http://openweathermap.org/img/wn/10d@2x.png" id="emoji" alt="Clear" class="emoji"/>
+                    </div>
+                    <p id="description">
+                    </p>
+                     <span id="temperature" class="temperature"></span>  
+                     <a href="#"id="sels">℃</a> |
+                     <a href="#" id="fahr">℉</a>
+                   
+                </div>
+                <div class="weather">
+                    <div id="current_town"></div>
+                    <div id="current_date"></div>
+                </div>
+              
+            </div>
+            <div class="col-8">
+                <ul>
+                    <li>
+                        <div class="sat">
+                        <h2>
+                          Sat <br />
+                          🌧<br />
+                          22℃
+                        </h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sun">
+                            <h2>
+                              Sun <br />
+                              ⛅ <br />
+                              26℃
+                            </h2>
+                          </div>
+                    </li>
+                    <li>
+                        <div class="sun">
+                            <h2>
+                              Sun <br />
+                              ⛅ <br />
+                              26℃
+                            </h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="mon">
+                            <h2>
+                              Mon <br />
+                              ⛅ <br />
+                              27℃
+                            </h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tue">
+                            <h2>
+                              Tue <br />
+                              ⛅ <br />
+                              27℃
+                            </h2>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="wed">
+                            <h2>
+                              Wed <br />
+                              🌞 <br />
+                              28℃
+                            </h2>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="link">
+   <div>
+    <a class="text-link" href="https://github.com/TetianaMaltseva/weather-maltseva.git"target="blank">Open-source code,</a>
+   Maltseva Tetiana</div>
+</section>
+    <script src="appw.js" defer></script>
+</body>
+</html>

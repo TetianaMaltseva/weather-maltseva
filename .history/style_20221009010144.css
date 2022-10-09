@@ -1,0 +1,64 @@
+body{
+    background: linear-gradient(90deg, rgb(115, 162, 252) 31%, rgb(67, 10, 224) 100%);
+    color: #f0f8ff;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: #f0f8ff;
+}
+.container{
+    padding: 30px 0 30px 0;
+}
+.btn btn-primary{
+  background: green;
+}
+.weather,.current_weather {
+    text-align: center;
+}
+#current_town{
+    font-size: 100px;
+}
+.emoji{
+  min-width: 250px;
+  min-height: 200px;
+}
+.temperature{
+    font-size: 75px;
+    font-weight: 100;
+}
+.measure{
+  position: relative;
+  font-size: 26px;
+  top: -34px;
+}
+#current_date{
+    font-size: 40px;
+    font-weight: 200;
+}
+.submit {
+    border: 1px solid rgba(71, 81, 226, 0.74);
+    color: blue;
+    transition: all 3ms ease-in-out;
+  }
+  .submit:hover {
+    border: 2px solid blue;
+    color: rgb(3, 3, 109);
+  }
+  ul{
+    list-style: none;
+  }
+  .sat,.sun,.mon, .tue,.wed {
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    border: 1px solid rgba(71, 221, 226, 0.74);
+    border-radius: 7px;
+  }
+  .link{
+    text-align: left;
+    margin-left: 200px;
+  }
+  .text-link{
+    color:rgba(22, 22, 132, 0.914);
+  }

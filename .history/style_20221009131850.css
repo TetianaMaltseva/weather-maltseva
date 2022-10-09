@@ -3,16 +3,7 @@ body{
 }
 a{
     text-decoration: none;
-    color: rgba(255,255,255,0.5);
-}
-ul{
-  padding-top: 15px;
-  list-style: none;
-  display: flex;
-  justify-content: space-around;
-}
-p{
-  color: rgba(255,255,255,0.5);
+    color: #f0f8ff;
 }
 #shadow,.today,.wind,.week{
   background: linear-gradient(90deg, rgb(115, 162, 252) 31%, rgb(67, 10, 224) 100%);
@@ -47,7 +38,6 @@ p{
     font-weight: 100;
 }
 .measure{
-  color: rgba(255,255,255,0.5); 
   position: relative;
   font-size: 26px;
   font-weight: 100;
@@ -57,30 +47,23 @@ p{
     font-size: 20px;
     font-weight: 100;
 }
-.himidity,.speed,.deg,.max,.min,.pressure{
+.himidity,.speed,.deg{
   font-size: 55px;
   font-weight: 100;
 }
-.tem_max,.tem_min{
-  position: relative;
-  font-size: 16px;
-  top: -28px;
-}
+
+  ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+  }
   .sat,.sun,.mon, .tue,.wed {
     text-align: center;
     padding: 5px;
     margin: 10px;
-    font-size: 35px;
-    font-weight: 100;
   }
-  .today_text{
-    color: rgba(255,255,255,0.5);
-    padding: 10px 0 20px 50px;
-  }
-  
-  .today,.wind{
+  .today{
     justify-content: space-around;
-    min-width: 250px;
   }
   .link{
     text-align: left;

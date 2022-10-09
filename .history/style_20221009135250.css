@@ -6,7 +6,6 @@ a{
     color: rgba(255,255,255,0.5);
 }
 ul{
-  padding-top: 15px;
   list-style: none;
   display: flex;
   justify-content: space-around;
@@ -66,18 +65,15 @@ p{
   font-size: 16px;
   top: -28px;
 }
+
   .sat,.sun,.mon, .tue,.wed {
+    color: rgba(255,255,255,0.5);
     text-align: center;
     padding: 5px;
     margin: 10px;
     font-size: 35px;
     font-weight: 100;
   }
-  .today_text{
-    color: rgba(255,255,255,0.5);
-    padding: 10px 0 20px 50px;
-  }
-  
   .today,.wind{
     justify-content: space-around;
     min-width: 250px;

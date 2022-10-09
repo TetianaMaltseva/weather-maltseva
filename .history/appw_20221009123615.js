@@ -42,18 +42,14 @@ function showWeather(response){
     document.querySelector("#current_town").innerHTML = response.data.name;
     document.querySelector('#temperature').innerHTML = Math.round(response.data.main.temp);
     document.querySelector('#description').innerHTML = response.data.weather[0].main;
-    document.querySelector('#speed').innerHTML = response.data.wind.speed;
-    document.querySelector('#humidity').innerHTML = response.data.main.humidity;
-    document.querySelector('#deg').innerHTML = response.data.wind.deg;
-    document.querySelector('#max').innerHTML = Math.round(response.data.main.temp_max);
-    document.querySelector('#min').innerHTML = Math.round(response.data.main.temp_min);
-    document.querySelector('#pressure').innerHTML = response.data.main.pressure;
     document.querySelector('#emoji').setAttributesetAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+    document.querySelector("#wind").innerHTML = response.data.wind.speed;
     
     getForecast(response.data.coord);
     }
     function getForecast(coordinates) {
-    //  console.log(coordinates);
+      console.log(coordinates);
       let units = 'metric';
       let apiKey = '4edb0a7a27b92eb939536e22c879746a';
       let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;

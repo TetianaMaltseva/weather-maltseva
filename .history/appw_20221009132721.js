@@ -47,7 +47,6 @@ function showWeather(response){
     document.querySelector('#deg').innerHTML = response.data.wind.deg;
     document.querySelector('#max').innerHTML = Math.round(response.data.main.temp_max);
     document.querySelector('#min').innerHTML = Math.round(response.data.main.temp_min);
-    document.querySelector('#pressure').innerHTML = response.data.main.pressure;
     document.querySelector('#emoji').setAttributesetAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     
     getForecast(response.data.coord);

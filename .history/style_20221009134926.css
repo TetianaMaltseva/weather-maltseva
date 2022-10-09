@@ -6,13 +6,12 @@ a{
     color: rgba(255,255,255,0.5);
 }
 ul{
-  padding-top: 15px;
   list-style: none;
   display: flex;
   justify-content: space-around;
 }
 p{
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.5) 
 }
 #shadow,.today,.wind,.week{
   background: linear-gradient(90deg, rgb(115, 162, 252) 31%, rgb(67, 10, 224) 100%);
@@ -66,6 +65,7 @@ p{
   font-size: 16px;
   top: -28px;
 }
+
   .sat,.sun,.mon, .tue,.wed {
     text-align: center;
     padding: 5px;
@@ -73,11 +73,6 @@ p{
     font-size: 35px;
     font-weight: 100;
   }
-  .today_text{
-    color: rgba(255,255,255,0.5);
-    padding: 10px 0 20px 50px;
-  }
-  
   .today,.wind{
     justify-content: space-around;
     min-width: 250px;

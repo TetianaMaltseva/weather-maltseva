@@ -6,7 +6,6 @@ a{
     color: rgba(255,255,255,0.5);
 }
 ul{
-  padding-top: 15px;
   list-style: none;
   display: flex;
   justify-content: space-around;
@@ -75,7 +74,7 @@ p{
   }
   .today_text{
     color: rgba(255,255,255,0.5);
-    padding: 10px 0 20px 50px;
+    padding: 0 0 50px  10px;
   }
   
   .today,.wind{
