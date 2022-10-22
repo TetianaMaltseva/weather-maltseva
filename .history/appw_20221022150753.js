@@ -151,15 +151,15 @@ function displayForecast(response){
   let forecastHTML = `<ul >`;
 
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index < 6) {
         forecastHTML = forecastHTML + `
         <li class="week"  >
         <div class="sat">
             <div class = "forecast_date">${dayFormat(forecastDay.dt)}</div>
             <img src = "http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt = "clear" id ="emoji"/>
             <div class = "forecast_temperature">
-                <div>day ${Math.round(forecastDay.temp.max)}C°</div>
-                <div>night ${Math.round(forecastDay.temp.min)}C°</div>
+                <span id= "temperature">${Math.round(forecastDay.temp.min)}°</span>
+                <span class = "temperature_max">${Math.round(forecastDay.temp.max)}°</span>
             </div>
         </div>
         </li>`
@@ -168,3 +168,4 @@ function displayForecast(response){
 forecastHTML = forecastHTML + `</ul>`;
 forecastElement.innerHTML = forecastHTML;
 }
+displayForecast();

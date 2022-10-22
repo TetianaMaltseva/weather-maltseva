@@ -158,8 +158,8 @@ function displayForecast(response){
             <div class = "forecast_date">${dayFormat(forecastDay.dt)}</div>
             <img src = "http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt = "clear" id ="emoji"/>
             <div class = "forecast_temperature">
-                <div>day ${Math.round(forecastDay.temp.max)}C°</div>
-                <div>night ${Math.round(forecastDay.temp.min)}C°</div>
+                <span id= "temperature">min ${Math.round(forecastDay.temp.min)}C°</span>
+                <span class = "temperature_max">max ${Math.round(forecastDay.temp.max)}C°</span>
             </div>
         </div>
         </li>`
@@ -168,3 +168,4 @@ function displayForecast(response){
 forecastHTML = forecastHTML + `</ul>`;
 forecastElement.innerHTML = forecastHTML;
 }
+displayForecast();

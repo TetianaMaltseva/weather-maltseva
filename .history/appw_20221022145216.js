@@ -76,14 +76,14 @@ function showWeather(response){
     function getForecast(coordinates) {
     //  console.log(coordinates);
       let units = 'metric';
-      let apiKey = '6a0bac9dced487830ce6066218a5481c';
+      let apiKey = '4edb0a7a27b92eb939536e22c879746a';
       let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=${units}`;
       axios.get(apiUrl).then(displayForecast);
   }
   
     function searchCity(city) {
       let units = "metric";
-      let apiKey = '6a0bac9dced487830ce6066218a5481c';
+      let apiKey = '4edb0a7a27b92eb939536e22c879746a';
       let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
       axios.get(apiUrl).then(showWeather);
   }
@@ -105,7 +105,7 @@ let form = document.querySelector("#form_city");
     let currentLatitude = position.coords.latitude;
     let currentLongitude = position.coords.longitude;
     let units = "metric";
-    let apiKey = '6a0bac9dced487830ce6066218a5481c';
+    let apiKey = '4edb0a7a27b92eb939536e22c879746a';
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${currentLatitude}&lon=${currentLongitude}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(showWeather);
   }
@@ -143,23 +143,23 @@ function convertToCelsius(event) {
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-function displayForecast(response){
-  console.log(response.data.daily);
-  let forecast = response.data.daily;
+function displayForecast(){
+    
+ // let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<ul >`;
+  let forecastHTML = `<ul>`;
 
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index < 6) {
         forecastHTML = forecastHTML + `
         <li class="week"  >
         <div class="sat">
             <div class = "forecast_date">${dayFormat(forecastDay.dt)}</div>
             <img src = "http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt = "clear" id ="emoji"/>
             <div class = "forecast_temperature">
-                <div>day ${Math.round(forecastDay.temp.max)}C°</div>
-                <div>night ${Math.round(forecastDay.temp.min)}C°</div>
+                <span id= "temperature">${Math.round(forecastDay.temp.min)}°</span>
+                <span class = "temperature_max">${Math.round(forecastDay.temp.max)}°</span>
             </div>
         </div>
         </li>`
@@ -168,3 +168,4 @@ function displayForecast(response){
 forecastHTML = forecastHTML + `</ul>`;
 forecastElement.innerHTML = forecastHTML;
 }
+displayForecast();
